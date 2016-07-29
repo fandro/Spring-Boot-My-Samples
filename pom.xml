@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.mysamples</groupId>
-    <artifactId>pring-boot-mysamples</artifactId>
+    <artifactId>spring-boot-mysamples</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Spring Boot Samples</name>
@@ -14,20 +14,26 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.3.6.RELEASE</version>
+        <version>1.4.0.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>1.8</java.version>
+        <java.version>1.7</java.version>
     </properties>
 
     <modules>
         <module>my-sample-web-jsp</module>
         <module>my-sample-web-freemarker</module>
-        <module>my-sample-data-jpa</module>
         <module>my-sample-web-two-datasource</module>
+        <module>my-sample-data-jpa</module>
+        <module>my-sample-data-jpa-two-entityManagers</module>
+        <module>my-sample-dubbo</module>
+        <module>my-sample-mybatis</module>
+        <module>my-sample-hibernate</module>
+        <module>my-sample-dynamic-datasource</module>
+        <module>my-sample-integration-all</module>
         <!--<module>spring-boot-sample-ant</module>
         <module>spring-boot-sample-activemq</module>
         <module>spring-boot-sample-actuator</module>

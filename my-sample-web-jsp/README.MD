@@ -1,19 +1,18 @@
 
-布局：
-java 文件：src/main/java/com
+**1.布局**：
+java文件：src/main/java/com
 静态文件：src/main/resources/static：静态文件（css、js等）
 配置文件：src/main/resources/application.properties
 jsp路径：src/main/webapp/WEB-INF/jsp
 
 
-配置属性文件
+**2.配置属性文件**
 application.properties文件中配置：
 spring.mvc.view.prefix: /WEB-INF/jsp/
 spring.mvc.view.suffix: .jsp
 
-
-
-配置pom.xml
+**3.配置pom.xml**
+```
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-web</artifactId>
@@ -37,6 +36,7 @@ spring.mvc.view.suffix: .jsp
         </plugin>
     </plugins>
 </build>
+```
 
-运行:
+**4.运行**
 mvn spring-boot:run
