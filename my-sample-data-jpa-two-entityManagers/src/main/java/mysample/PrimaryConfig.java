@@ -29,6 +29,9 @@ public class PrimaryConfig {
     @Qualifier("primaryDataSource")
     private DataSource primaryDataSource;
 
+    @Autowired
+    private JpaProperties jpaProperties;
+
     @Primary
     @Bean(name = "entityManagerPrimary")
     public EntityManager entityManager(EntityManagerFactoryBuilder builder) {
@@ -46,17 +49,14 @@ public class PrimaryConfig {
                 .build();
     }
 
-    @Autowired
-    private JpaProperties jpaProperties;
-
-    private Map<String, String> getVendorProperties(DataSource dataSource) {
-        return jpaProperties.getHibernateProperties(dataSource);
-    }
-
     @Primary
     @Bean(name = "transactionManagerPrimary")
     public PlatformTransactionManager transactionManagerPrimary(EntityManagerFactoryBuilder builder) {
         return new JpaTransactionManager(entityManagerFactoryPrimary(builder).getObject());
+    }
+
+    private Map<String, String> getVendorProperties(DataSource dataSource) {
+        return jpaProperties.getHibernateProperties(dataSource);
     }
 
 }

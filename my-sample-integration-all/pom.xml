@@ -41,12 +41,6 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
-        <!-- 链接池-->
-        <!--<dependency>
-            <groupId>org.apache.tomcat</groupId>
-            <artifactId>tomcat-jdbc</artifactId>
-        </dependency>
--->
         <!--热加载-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
